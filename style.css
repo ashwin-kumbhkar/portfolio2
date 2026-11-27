@@ -412,7 +412,7 @@ a {
 
 
 
-#journey {
+/* #journey {
     height: 800px;
     padding-top: 100px;
     color: #a68af3;
@@ -428,7 +428,7 @@ a {
         font-family: 'DM Mono';
     }
     border-bottom: 1px solid rgb(19, 37, 54);
-}
+} */
 
 .content {
     display: flex;
