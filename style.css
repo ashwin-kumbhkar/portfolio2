@@ -50,10 +50,71 @@ a {
     border-radius: 6px;
     font-size: clamp(10px, 2vw, 16px);
 }
-
 .hp {
-
+    display: flex;
     border-bottom: 1px solid rgb(19, 37, 54);
+}
+.right {
+    margin: 80px;
+}
+.outer {
+    margin: 100px 0 0 100px;
+    display: grid;
+    place-items: center;
+    top: 20px;
+    bottom: 50px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 1px solid #31235a;
+    animation: rotate 20s infinite linear;
+}
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.ball {
+    display: flex;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+
+    background-image: url(earthh.png);
+    background-size: cover;
+    box-shadow: 0 2px 50px rgba(0, 255, 255, 0.752);
+    animation: rotate 10s infinite linear;
+
+}
+.moon {
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: rgb(200, 200, 200);
+}
+.inner {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100px;
+    width: 100px;
+    border-radius: 50%;
+
+    background-image: url(sun.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    transform: translateY(-6px);
+    box-shadow: 0px 0 50px rgba(255, 221, 0, 0.5);
+    
+    
+}
+
+
+
+.left {
+    
     min-height: 600px;
     padding: 60px clamp(24px, 10vw, 150px) 100px;
     display: flex;
@@ -125,7 +186,7 @@ a {
     height: 80px;
     width: 100%;
     background-color: #030610;
-    display: flex;
+    display: inline-flex;
     justify-content: space-evenly;
     align-items: center;
     animation: move 10s linear infinite;
@@ -351,8 +412,68 @@ a {
 
 
 
+#journey {
+    height: 800px;
+    padding-top: 100px;
+    color: #a68af3;
+    padding-bottom: 100px;
 
+    h1 {
+        color: white;
+        font-size: clamp(35px, 4vw, 80px);
+    }
 
+    
+    pre {
+        font-family: 'DM Mono';
+    }
+    border-bottom: 1px solid rgb(19, 37, 54);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+}
+.content > .line {
+    hr {
+        transform: rotate(90deg);
+        width: 350px;
+        padding: 0;
+        border: 1px solid #2c253e;
+    }
+    #dot {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #443964;
+        margin-left: 170px;
+        z-index: 500;
+    }
+    
+}
+.content > .path{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    #one, #two, #three {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+    #one, #two, #three> #year {
+        font-size: clamp(12px, 3vw, 20px);
+    }
+    #place {
+        color: white;
+        font-weight: 900;
+        font-size: clamp(16px, 1vw, 25px);
+    }
+    #stmt {
+        color: #9297AA;
+    }
+}
 #contact {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -424,6 +545,14 @@ a {
     font-weight: 100;
 }
 @media (max-width: 480px)  {
+    .hp {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .right {
+        padding-right: 130px;
+    }
     .project-blocks{
         flex-direction: column;
         align-items: center;
