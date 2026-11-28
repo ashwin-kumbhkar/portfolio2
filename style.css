@@ -57,6 +57,7 @@ a {
 .right {
     margin: 80px;
 }
+
 .outer {
     margin: 100px 0 0 100px;
     display: grid;
@@ -75,7 +76,14 @@ a {
     }
 }
 
-.ball {
+.em {
+    display: flex;
+    gap: 15px;
+    background-size: cover;
+    animation: rotate 10s infinite linear;
+
+}
+.earth {
     display: flex;
     height: 20px;
     width: 20px;
@@ -83,17 +91,17 @@ a {
 
     background-image: url(earthh.png);
     background-size: cover;
-    box-shadow: 0 2px 50px rgba(0, 255, 255, 0.752);
-    animation: rotate 10s infinite linear;
+    box-shadow: 0 2px 50px 0.1px rgba(0, 255, 255, 0.752);
+    animation: rotate 20s infinite linear;
 
 }
 .moon {
-    height: 2px;
-    width: 2px;
+    height: 4px;
+    width: 4px;
     border-radius: 50%;
     background-color: rgb(200, 200, 200);
 }
-.inner {
+.sun {
     color: white;
     display: flex;
     justify-content: center;
@@ -110,7 +118,6 @@ a {
     
     
 }
-
 
 
 .left {
